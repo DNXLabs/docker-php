@@ -1,4 +1,4 @@
-VERSION = 1.0.2
+VERSION = php-5.6-dnx-1.0.0
 IMAGE_NAME ?= dnxsolutions/php:$(VERSION)
 TAG = $(VERSION)
 
