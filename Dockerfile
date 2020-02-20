@@ -20,6 +20,22 @@ RUN apt-get update \
       --with-xpm-dir=/usr/include/ --with-freetype-dir=/usr/include/ \ 
     && docker-php-ext-install gd 
 
+
+RUN apt-get -y update \
+  && apt-get install -y libicu-dev cmake nasm gcc zlib* libglew-dev glew-utils gengetopt libimlib2-dev libglm-dev libpng* imagemagick ffmpeg wget unzip \ 
+  && docker-php-ext-configure intl \
+  && docker-php-ext-install intl 
+
+RUN cd ~ \ 
+  && wget https://github.com/mozilla/mozjpeg/archive/master.zip \
+  && unzip master.zip \
+  && mkdir mozjpeg \
+  && cd mozjpeg \
+  && cmake -G "Unix Makefiles" ../mozjpeg-master/ \
+  && make \
+  && make install
+
+
 EXPOSE 80
 
 
