@@ -1,4 +1,4 @@
-VERSION = 1.0.2
+VERSION = 1.0.4
 IMAGE_NAME ?= dnxsolutions/php:$(VERSION)
 TAG = $(VERSION)
 
