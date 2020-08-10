@@ -1,6 +1,6 @@
 # docker-php
 
-Docker image containing php:7.2-apache and the following php extensions:
+Docker image containing php:7.4-apache and the following php extensions:
 - mcrypt
 - pdo
 - pdo_mysql 
@@ -37,4 +37,4 @@ Docker image
 
 The Docker image has the following:
 
-- php:7.2-apache
+- php:7.4-apache
